@@ -1,0 +1,17 @@
+{
+  "name": "overseas-media-workbench",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "以飞书 Base 为主数据源的海外媒体客户工作台",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "sync": "node scripts/sync-feishu.mjs",
+    "check": "node --check server.mjs && node --check public/app.js && node --check lib/feishu.mjs && node --check lib/domain.mjs && node --check lib/analysis.mjs && node --check lib/collector.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}
